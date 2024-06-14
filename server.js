@@ -15,12 +15,13 @@ const static = require("./routes/static")
  * Routes
  *************************/
 app.use(static)
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" })
-})
 app.set("view engine", "ejs")
+app.set("views", __dirname + "/views")
 app.use(expressLayouts)
 app.set("layout", "./layouts/layout")
+app.use(express.static("public"))
+
+app.use("/", require("./routes/index"))
 
 /* ***********************
  * Local Server Information

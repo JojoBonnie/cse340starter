@@ -1,6 +1,173 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.siteName a {
+  color: #333;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#tools a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 0.25em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  color: black;
+}
+
+.hero img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-text {
+  margin-left: 0.5em;
+}
+
+.hero-caption {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #008cba;
+  padding: 0.5em;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.hero-caption h3,
+.hero-caption p {
+  font-weight: bolder;
+  margin: 0;
+}
+
+.hero-caption .btn {
+  background-color: #008cba;
+  border: none;
+  width: 100%;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.col {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.img-box {
+  background-color: #008cba;
+  padding: 1em;
+  text-align: center;
+}
+
+.upgrade img {
+  width: auto;
+  height: 75px;
+}
+
+.upgrade a {
+  display: block;
+  text-align: center;
+  color: #333;
+}
+
+.reviews ul li {
+  margin: 1em 0;
+}
+
+footer {
+  color: #333;
+  text-align: left;
+  margin-top: 2em;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/site/small_check.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #wrapper {
+    background-color: #fff;
+    padding: 1em;
+    border: #008cba 4px solid;
+    border-radius: 10px;
+  }
+
+  .content {
+    flex-direction: row;
+  }
+
+  .col {
+    width: 49%;
+    margin-left: 1%;
+  }
+
+  .hero-caption {
+    top: 30%;
+    left: 5%;
+    transform: scale(1.5);
+  }
+
+  .reviews {
+    order: 2;
+  }
+
+  .upgrades {
+    order: 1;
+  }
 }

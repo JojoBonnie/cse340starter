@@ -1,0 +1,80 @@
+/* Base styles for the grid container */
+#inv-display {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 20px;
+  padding: 0;
+  margin: 20px;
+}
+
+#inv-display li {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+#inv-display li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styles for the vehicle image */
+#inv-display img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Divider style */
+hr {
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+  background-color: #cccccc;
+}
+
+/* Vehicle name and price container */
+.namePrice {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.namePrice h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333333;
+}
+
+.namePrice a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.namePrice span {
+  display: block;
+  font-size: 16px;
+  color: #e84a5f;
+  font-weight: bold;
+}
+
+/* Notice style when no vehicles are found */
+.notice {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+  background-color: #cccccc;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #inv-display {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
